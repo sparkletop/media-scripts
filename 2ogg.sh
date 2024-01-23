@@ -64,7 +64,7 @@ NUM_FAILED=0
 NUM_SKIPPED=0
 NUM_DELETED=0
 
-if [ -z "$@" ]; then
+if [[ -z "$@" ]]; then
   echo "No arguments provided."
   usage; exit 1
 fi
