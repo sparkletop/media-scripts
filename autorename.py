@@ -24,6 +24,7 @@ class Watcher(FileSystemEventHandler):
         self.grace_period = grace_period
         self.timestamp()
         self.watching = True
+        self.has_content = False
 
     def on_created(self, event):
         print(f"{time.ctime()}: New {'subdirectory' if os.path.isdir(event.src_path) else 'file'} created: {event.src_path}")
@@ -65,7 +66,6 @@ class Watcher(FileSystemEventHandler):
         self.observer = Observer()
         self.observer.schedule(self, self.root_dir, recursive=True)
         self.observer.start()
-        self.timestamp()
 
         try:
             while self.watching:
