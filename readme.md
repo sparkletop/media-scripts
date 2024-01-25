@@ -6,7 +6,7 @@ The scripts are not tested in any rigorous way, so they probably shouldn't be us
 
 ## The scripts
 
-- *2m4a.sh* - convert and compress audio file using the aac codec and a .mha container
+- *2m4a.sh* - convert and compress audio file using the aac codec and a .m4a container
 - *2ogg.sh* - convert and compress audio file using the libvorbis codec and a .ogg container
 - *dffmpeg.sh* - run ffmpeg in a docker container from linuxserver.io
 - *autorename.py* - script to monitor a directory for changes and rename sequentially after a grace period with no changes
